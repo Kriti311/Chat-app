@@ -1,0 +1,128 @@
+ form {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    height: 100vh;
+    background-color: #f0f0f0;
+  }
+    /*
+  
+  .signup-page h1 {
+    margin-bottom: 20px;
+  }
+  
+  .signup-page form {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+  
+  .signup-page input {
+    margin: 10px 0;
+    padding: 10px;
+    width: 250px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+  }
+  
+  .signup-page button {
+    padding: 10px 20px;
+    background-color: #28a745;
+    color: white;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+  }
+  
+  .signup-page button:hover {
+    background-color: #218838;
+  }
+  
+  .signup-page p {
+    margin-top: 20px;
+  }
+  
+  .signup-page a {
+    color: #007bff;
+    text-decoration: none;
+  }
+  
+  .signup-page a:hover {
+    text-decoration: underline;
+  }
+   */
+/* 
+   .signup-page {
+    margin-left: 35vw;
+    margin-right: 35vw;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    height: 100vh;
+    background-color: #f0f0f0;
+  }
+  
+  .signup-page h1 {
+    margin-bottom: 20px;
+  }
+  
+  .signup-page form {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+  
+  .signup-page input {
+    margin: 10px 0;
+    padding: 10px;
+    width: 250px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+  }
+  
+  .signup-page button {
+    padding: 10px 20px;
+    background-color: #28a745;
+    color: white;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+  }
+  
+  .signup-page button:hover {
+    background-color: #218838;
+  }
+  
+  .signup-page p {
+    margin-top: 20px;
+  }
+  
+  .signup-page a {
+    color: #007bff;
+    text-decoration: none;
+  }
+  
+  .signup-page a:hover {
+    text-decoration: underline;
+  }
+   */
+   .signupForm {
+    display: flex;
+    flex-direction: column;
+    max-width: 400px;
+    margin: auto;
+}
+
+.input {
+    margin-bottom: 15px;
+    padding: 10px;
+    font-size: 16px;
+}
+
+.button {
+    padding: 10px;
+    font-size: 16px;
+    cursor: pointer;
+}

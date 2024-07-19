@@ -1,0 +1,34 @@
+.chat-list-page {
+    padding: 20px;
+    background-color: #f8f9fa;
+    min-height: 100vh;
+  }
+  
+  .chat-list-page h1 {
+    text-align: center;
+    margin-bottom: 20px;
+  }
+  
+  .chat-list-page ul {
+    list-style: none;
+    padding: 0;
+  }
+  
+  .chat-list-page li {
+    margin: 10px 0;
+    padding: 10px;
+    background-color: #ffffff;
+    border: 1px solid #ddd;
+    border-radius: 4px;
+  }
+  
+  .chat-list-page a {
+    text-decoration: none;
+    color: #007bff;
+    display: block;
+  }
+  
+  .chat-list-page a:hover {
+    text-decoration: underline;
+  }
+  
