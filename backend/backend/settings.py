@@ -11,6 +11,8 @@ https://docs.djangoproject.com/en/4.0/ref/settings/
 """
 
 from pathlib import Path
+# import django
+# django.setup()
 
 # Build paths inside the project like this: BASE_DIR / 'subdir'.
 BASE_DIR = Path(__file__).resolve().parent.parent
@@ -45,6 +47,7 @@ INSTALLED_APPS = [
     'rest_framework_simplejwt.token_blacklist',
 
 ]
+
 REST_FRAMEWORK = {
     'DEFAULT_AUTHENTICATION_CLASSES': (
         'rest_framework_simplejwt.authentication.JWTAuthentication',
@@ -115,6 +118,9 @@ CHANNEL_LAYERS = {
         },
     },
 }
+REDIS_HOST = '127.0.0.1'
+REDIS_PORT = 6379
+
 
 # Database
 # https://docs.djangoproject.com/en/4.0/ref/settings/#databases
@@ -125,21 +131,21 @@ CHANNEL_LAYERS = {
 #         'NAME': BASE_DIR / 'db.sqlite3',
 #     }
 # }
-# DATABASES = {
-#     'default': {
-#         'ENGINE': 'django.db.backends.postgresql',
-#         'NAME': 'chat_db',
-#         'USER': 'postgres',
-#         'PASSWORD': 'hello',
-#         'HOST': 'localhost',  # Set to 'localhost' or the IP address of your database server
-#         'PORT': '5432',       # Default port for PostgreSQL
-#     }
-# }
+DATABASES = {
+    'default': {
+        'ENGINE': 'django.db.backends.postgresql',
+        'NAME': 'chat_db',
+        'USER': 'postgres',
+        'PASSWORD': 'pass',
+        'HOST': 'localhost',  # Set to 'localhost' or the IP address of your database server
+        'PORT': '5432',       # Default port for PostgreSQL
+    }
+}
 # \\ docker run -d --name my_postgres -e POSTGRES_PASSWORD=pass -p 5432:5432 -v chat_data:/var/lib/postgresql/data postgres
 
 # docker exec -it my_postgres psql -U postgres
-
-
+### docker run --name redis -p 6379:6379 -d redis
+### docker exec -it redis redis-cli ping
 
 
 # Password validation
@@ -183,3 +189,4 @@ STATIC_URL = 'static/'
 
 DEFAULT_AUTO_FIELD = 'django.db.models.BigAutoField'
 AUTH_USER_MODEL = 'chat.CustomUser'
+LOGIN_URL = 'login/' 

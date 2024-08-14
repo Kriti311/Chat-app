@@ -3,8 +3,9 @@
 import React, { useState } from 'react';
 import axios from 'axios';
 import { TextField, Button, Box } from '@mui/material';
+import PropTypes from 'prop-types';
 
-const CreateChatRoom = ({ onRoomCreated }) => {
+const CreateChatRoom = ({ onRoomCreated = () => {} }) => {
     const [roomName, setRoomName] = useState('');
     const [participants, setParticipants] = useState('');
 
@@ -44,5 +45,7 @@ const CreateChatRoom = ({ onRoomCreated }) => {
         </Box>
     );
 };
-
+CreateChatRoom.propTypes = {
+    onRoomCreated: PropTypes.func
+};
 export default CreateChatRoom;

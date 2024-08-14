@@ -144,9 +144,11 @@
 // export default SignupPage;
 import React, { useState } from 'react';
 import axios from 'axios';
+import { useNavigate } from 'react-router-dom';
 import { TextField, Button, Container, Typography, Box, Paper } from '@mui/material';
 
 const SignupPage = () => {
+    const navigate = useNavigate();
     const [email, setEmail] = useState('');
     const [firstName, setFirstName] = useState('');
     const [lastName, setLastName] = useState('');

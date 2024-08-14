@@ -201,6 +201,7 @@ const LoginPage = () => {
             Cookies.set('refresh', response.data.refresh);
             // setUser(data.user);
             // Redirect to the chat page or any other page
+            // navigate('/chatroom');
             navigate('/chats');
         } catch (error) {
             console.error('Error user login:', error);

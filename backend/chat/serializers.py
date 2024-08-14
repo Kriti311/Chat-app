@@ -1,6 +1,6 @@
 # myapp/serializers.py
 from rest_framework import serializers
-from .models import CustomUser
+from .models import CustomUser, ChatRoom,  Message
 
 class CustomUserSerializer(serializers.ModelSerializer):
     class Meta:
@@ -24,8 +24,17 @@ class CustomUserRegistrationSerializer(serializers.ModelSerializer):
         user.save()
         return user
 
+class ChatRoomSerializer(serializers.ModelSerializer):
+    class Meta:
+        model = ChatRoom
+        fields = '__all__'
 
-# class UserSerializer(serializers.ModelSerializer):
-#     class Meta:
-#         model = User
-#         fields = ['id', 'username']  # Add fields as needed
+class MessageSerializer(serializers.ModelSerializer):
+    class Meta:
+        model = Message
+        fields = '__all__'
+
+class UserSerializer(serializers.ModelSerializer):
+    class Meta:
+        model = CustomUser
+        fields = ['id', 'first_name', 'last_name']

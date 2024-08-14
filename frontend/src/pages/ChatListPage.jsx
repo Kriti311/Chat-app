@@ -256,13 +256,18 @@
 
 
 import React, { useEffect, useState } from 'react';
-import { Link, useHistory } from 'react-router-dom';
+// import { Link, useHistory } from 'react-router-dom';
+import { useNavigate } from 'react-router-dom';
+
 import axios from 'axios';
 import { List, ListItem, ListItemText, Typography, Container, Paper } from '@mui/material';
 
+// const navigate = useNavigate();
+
 const ChatListPage = () => {
     const [users, setUsers] = useState([]);
-    const history = useHistory();
+    const navigate = useNavigate();
+    // const history = useHistory();
 
     useEffect(() => {
         const fetchUsers = async () => {
@@ -282,7 +287,7 @@ const ChatListPage = () => {
             const response = await axios.post('http://localhost:8000/create-chat-room/', { user2_id: userId });
             const roomName = response.data.room_name;
             // Redirect to the chat room page
-            history.push(`/chat/${roomName}/`);
+            navigate(`/chat/${roomName}/`);
         } catch (error) {
             console.error('Error creating chat room:', error);
         }
